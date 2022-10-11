@@ -7,6 +7,7 @@ import Home from './component/home/Home';
 import Topic from './component/topic/Topic';
 import Statistics from './component/statistics/Statistics';
 import Blog from './component/blog/Blog';
+import Nomatch from './component/Nomathch/Nomatch';
 
 function App() {
   const router = createBrowserRouter([
@@ -16,6 +17,9 @@ function App() {
       children: [
         {
           path: '/',
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
           element: <Home></Home>
         },
         {
@@ -29,6 +33,10 @@ function App() {
         {
           path: '/blog',
           element: <Blog></Blog>
+        },
+        {
+          path: '*',
+          element: <Nomatch></Nomatch>
         }
       ]
     }

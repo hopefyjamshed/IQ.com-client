@@ -1,15 +1,32 @@
-import React from 'react';
+import { data } from 'autoprefixer';
+import React, { useState } from 'react';
+import { createSearchParams, useLoaderData } from 'react-router-dom';
 import img from '../../rm373batch13-089.jpg'
+import Cart from '../cart/Cart';
+import Head from '../head/Head';
 const Home = () => {
+
+
+
+    const carts = useLoaderData()
+
+
     return (
-        <div className='md:flex mt-6'>
-            <div className="w-full md:w-6/12">
-                <img className=' h-74' src={img} alt="" />
-            </div>
-            <div className="bg-blue-900 md:bg-black">
-                <h1 className=' md:mt-24 text-7xl font-bold text-white h-full p-5  '>Make difference with you</h1>
+        <div>
+            <Head></Head>
+
+
+
+            <div className='flex mt-7 gap-9 justify-center'>
+                {
+                    carts.data.map(cart => <Cart
+                        key={cart.id}
+                        cart={cart}
+                    ></Cart>)
+                }
             </div>
         </div>
+
     );
 };
 
