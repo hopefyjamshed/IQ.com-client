@@ -1,7 +1,7 @@
 import React from 'react';
 import Answare from '../answare/Answare';
 
-const Question = ({ quest }) => {
+const Question = ({ quest, }) => {
     const { id, correctAnswer, question, options } = quest
     console.log(quest)
 
@@ -14,6 +14,8 @@ const Question = ({ quest }) => {
                     options.map(option => <Answare
                         key={option.id}
                         option={option}
+                        quest={quest}
+
                     ></Answare>)
                 }
             </div>
