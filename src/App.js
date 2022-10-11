@@ -8,6 +8,7 @@ import Topic from './component/topic/Topic';
 import Statistics from './component/statistics/Statistics';
 import Blog from './component/blog/Blog';
 import Nomatch from './component/Nomathch/Nomatch';
+import Quiz from './component/header/Quiz/Quiz';
 
 function App() {
   const router = createBrowserRouter([
@@ -21,6 +22,14 @@ function App() {
             return fetch('https://openapi.programming-hero.com/api/quiz')
           },
           element: <Home></Home>
+        },
+        {
+          path: '/topic/:topicId',
+          loader: ({ params }) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`)
+          },
+
+          element: <Quiz></Quiz>
         },
         {
           path: '/topic',
