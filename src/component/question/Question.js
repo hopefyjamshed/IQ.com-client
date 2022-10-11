@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Answare from '../answare/Answare';
 
-const Question = ({ quest, }) => {
+const Question = ({ quest }) => {
     const { id, correctAnswer, question, options } = quest
-    console.log(quest)
+
+    const [quiz, setQuiz] = useState(quest)
+    const ansHandler = (id) => {
+        const correct = quiz.find(q => q.id === id);
+        console.lgo(correct)
+
+    }
+
 
 
     return (
@@ -15,6 +22,7 @@ const Question = ({ quest, }) => {
                         key={option.id}
                         option={option}
                         quest={quest}
+                        ansHandler={ansHandler}
 
                     ></Answare>)
                 }

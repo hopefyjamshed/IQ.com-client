@@ -8,6 +8,8 @@ const Quiz = () => {
     const { id, name, questions, correctAnswer
     } = topics.data
 
+    const [quiz, setQuiz] = useState(topics)
+
     // const [quiz, setQuiz] = useState(false)
     // const answareHandler = (answare) => {
     //     const correct = quiz.find(q => q.correctAnswer === answare.correctAnswer);
