@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+=> it fatch the API data and show it as cart in [/] home page,
+and the cart 'start quiz' button let you go to the quiz page.
+
+=> clicking the quiz option a toast says the answer is correct or not correct, and show the number of correct answers top of the page.
+
+
+=> the eye icon of the every quistion says the correct answar of each question by showing a toast.
+
+
+=> if you search a invalid address the site will show you 'page not found' type error.
+
+=> the number of question in each quiz showed by couple of carts in blog route,

@@ -5,6 +5,8 @@ import { BeakerIcon, Bars3Icon, LightBulbIcon } from '@heroicons/react/24/solid'
 
 const Header = () => {
     const [open, setOpen] = useState(false)
+
+
     return (
         <div className='flex md:p-3 items-center justify-between'>
             <Link to="/">

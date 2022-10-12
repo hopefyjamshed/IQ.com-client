@@ -8,7 +8,7 @@ const Statistics = () => {
     console.log(quizes)
     return (
         <div className=''>
-            <div className=' flex justify-center items-center gap-4 mt-5'>
+            <div className='md:flex md:justify-center md:items-center gap-4 mt-5'>
                 {
                     quizes.data.map(quiz => <StatisticData
                         key={quiz.id}

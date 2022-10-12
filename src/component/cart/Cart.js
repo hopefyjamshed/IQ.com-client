@@ -15,7 +15,7 @@ const Cart = ({ cart, handler }) => {
                     <div>
                         <h2 className=' text-xl font-bold'>{name}</h2>
                         <h3 className='text-5 text-white font-semibold ml-1'>
-                            quistion:{total}
+                            Total quistion:{total}
                         </h3>
                     </div>
 

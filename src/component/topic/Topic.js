@@ -1,3 +1,4 @@
+import { ArchiveBoxXMarkIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Question from '../question/Question';
@@ -20,7 +21,7 @@ const Topic = () => {
 
                 }
             </div> */}
-            <h1 className='text-3xl'> hey this is topic page</h1>
+            <h1 className='text-3xl'> <ArchiveBoxXMarkIcon icons={ArchiveBoxXMarkIcon}></ArchiveBoxXMarkIcon> </h1>
         </div>
     );
 };
