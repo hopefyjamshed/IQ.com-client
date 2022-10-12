@@ -10,25 +10,40 @@ const Quiz = () => {
 
 
     const [quiz, setQuiz] = useState(0)
+    const [Answer, setAnswer] = useState([])
     const ansHandler = (answare, option) => {
-        let correct = []
+
         if (option === answare) {
             alert('correct')
             setQuiz(quiz + 1)
 
 
 
+
         }
-        else {
-            alert('not correct')
-        }
+        // else {
+        //     alert('not correct')
+        // }
+
+    }
+    const eyeHandler = (correct) => {
+        // let ans = []
+        // const answ = Answer.find(f => f === answare)
+        // if (answ) {
+        //     ans = [...Answer, answare]
+        //     alert('ans')
+
+        alert(correct)
 
     }
 
     return (
         <div className='bg-slate-500'>
-            {quiz}
-            <h1 className=' text-4xl text-fuchsia-700'> Quiz of <span className=' font-bold'> {name}</span></h1>
+
+            <h1 className=' text-4xl text-white'> Quiz of <span className=' font-bold'> {name}</span></h1>
+            <dir>
+                <h1 className='text-2xl font-bold text-white'>Total correct Answer : <span className='text-3xl'>{quiz}</span></h1>
+            </dir>
 
             <div className=''>
                 {
@@ -36,6 +51,7 @@ const Quiz = () => {
                         key={quest.id}
                         quest={quest}
                         ansHandler={ansHandler}
+                        eyeHandler={eyeHandler}
 
 
                     ></Question>)
