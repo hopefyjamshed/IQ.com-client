@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 
-const Answare = ({ option, ansHandler }) => {
+const Answare = ({ option, correctAnswer, ansHandler }) => {
+
 
 
     return (
         <div>
+
             <div>
-                <ol type='1'>
-                    <li onClick={() => ansHandler(option)} className='bg-fuchsia-300 mt-5 mr-5 ml-5 hover:bg-fuchsia-800 hover:text-fuchsia-50 text-xl w py-4'>
+                <ol>
+                    <li className=''><button onClick={() => ansHandler(correctAnswer, option)} className='bg-fuchsia-300 mt-5 mr-5 ml-5 w-96 hover:bg-fuchsia-800 py-4 hover:text-fuchsia-50 text-xl w '>
                         {option}
-                    </li>
+                    </button></li>
                 </ol>
             </div>
         </div >

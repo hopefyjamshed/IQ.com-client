@@ -4,30 +4,30 @@ import Question from '../../question/Question';
 
 const Quiz = () => {
     const topics = useLoaderData()
-    console.log(topics)
     const { id, name, questions, correctAnswer
     } = topics.data
 
-    const [quiz, setQuiz] = useState(topics)
-
-    // const [quiz, setQuiz] = useState(false)
-    // const answareHandler = (answare) => {
-    //     const correct = quiz.find(q => q.correctAnswer === answare.correctAnswer);
-    //     if (correct) {
-    //         alert('the answare is correct')
-    //     }
-    //     else {
-    //         alert('the ans is wrong')
-    //     }
-    //     setQuiz(correct)
 
 
-    // }
+    const [quiz, setQuiz] = useState(0)
+    const ansHandler = (answare, option) => {
+        let correct = []
+        if (option === answare) {
+            alert('correct')
+            setQuiz(quiz + 1)
 
 
+
+        }
+        else {
+            alert('not correct')
+        }
+
+    }
 
     return (
         <div className='bg-slate-500'>
+            {quiz}
             <h1 className=' text-4xl text-fuchsia-700'> Quiz of <span className=' font-bold'> {name}</span></h1>
 
             <div className=''>
@@ -35,6 +35,7 @@ const Quiz = () => {
                     questions.map(quest => <Question
                         key={quest.id}
                         quest={quest}
+                        ansHandler={ansHandler}
 
 
                     ></Question>)
