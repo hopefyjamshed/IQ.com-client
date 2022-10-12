@@ -21,9 +21,9 @@ const Quiz = () => {
 
 
         }
-        // else {
-        //     alert('not correct')
-        // }
+        else {
+            alert('not correct')
+        }
 
     }
     const eyeHandler = (correct) => {
